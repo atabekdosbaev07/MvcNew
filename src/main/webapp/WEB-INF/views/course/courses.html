@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Courses</title>
+    <style>table,
+    td {
+        border: 1px solid #333;
+        margin-top: 200px;
+        margin-left: auto;
+        margin-right: auto;
+        font-size: 25px;
+    }
+
+    thead,
+    tfoot {
+        background-color: #333;
+        color: #fff;
+    }
+    </style>
+    <style>
+        table, th, td {
+            border: 1px solid black;
+            padding: 3px;
+        }
+    </style>
+</head>
+<body>
+<table class="table table-bordered ">
+    <thead class="table-dark">
+    <tr>
+        <th scope="col">Id</th>
+        <th scope="col">CourseName</th>
+        <th scope="col">DurationMonth</th>
+        <th scope="col" style="color:white">Company</th>
+        <th scope="col">Update</th>
+        <th scope="col">Delete</th>
+    </tr>
+    </thead>
+    <tbody class="table-success">
+    <tr th:each="course : ${courses}">
+        <td th:text="${course.id}"></td>
+        <td th:text="${course.courseName}"></td>
+        <td th:text="${course.durationMonth}"></td>
+
+    </tr>
+    </tbody>
+</table>
+<br><br><br><br>
+<input style=" display: block; margin:auto; font-size:30px;" type="button" value="Add course"
+       onclick="window.location.href = 'courses/addCourse'">
+</body>
+</html>
