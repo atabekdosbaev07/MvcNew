@@ -33,7 +33,8 @@ public class CourseController {
 
     @GetMapping()
     public String getAllCourses( Model model){
-        model.addAttribute("courses",coursesService.getAllCourse());
+        List<Course> courses = coursesService.getAllCourse();
+        model.addAttribute("courses",courses);
         return "course/courses";
     }
     @GetMapping("/addCourse")
@@ -62,7 +63,7 @@ public class CourseController {
     }
 
     @DeleteMapping("/deleteCourse")
-    public String deleteCourse(@RequestParam("courseId") Long id, @RequestParam("companyId") Long id2){
+    public String deleteCourse(@RequestParam("courseId") Long id ){
         coursesService.deleteCourse(coursesService.getCourseById(id));
         return "redirect:/courses";
     }

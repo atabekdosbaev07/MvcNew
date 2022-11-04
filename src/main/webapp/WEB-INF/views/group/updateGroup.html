@@ -3,7 +3,7 @@
       xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>Update</title>
+    <title>Title</title>
     <style>
         .from_button{
             border-radius: 10px;
@@ -28,17 +28,19 @@
 <body style="background-size: cover" background="https://gamerwall.pro/uploads/posts/2022-03/1647877342_1-gamerwall-pro-p-svetlo-goluboi-fon-krasivie-1.jpg">
 <form
         action="#"
-        th:action="@{saveUpdateCourse}"
-        th:object="${course}"
+        th:action="@{saveUpdateGroup}"
+        th:object="${group}"
         method="post"
         style="text-align:center; margin-top:100px; font-size: 30px;">
 
     <input type="hidden" name = "id" th:field="*{id}">
-    <input class="from_input" type="text"  name="companyName" th:field="*{courseName}" placeholder="Company Name">
+    <input class="from_input" type="text"  name="companyName" th:field="*{groupName}" placeholder="Company Name">
     <br><br>
-    <input class="from_input" type="text"  name="locatedCountry" th:field="*{durationMonth}" placeholder="Located Country">
+    <input class="from_input" type="text"  name="locatedCountry" th:field="*{dateOfStart}" placeholder="Located Country">
     <br><br>
-    <input class="from_input" type="text"  name="locatedCountry" th:field="*{companyId}" placeholder="Located Country">
+    <input class="from_input" type="text"  name="locatedCountry" th:field="*{dateOfFinish}" placeholder="Located Country">
+    <br><br>
+    <input class="from_input" type="text"  name="companyId" th:field="*{courseId}" placeholder="companyId"/>
     <br><br>
     <input class="from_button" type="submit" value="Update">
 </form>

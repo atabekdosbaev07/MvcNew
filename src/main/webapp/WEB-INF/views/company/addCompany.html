@@ -8,8 +8,27 @@
           rel="stylesheet"
           integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
           crossorigin="anonymous">
+    <style>
+        .from_button{
+            border-radius: 10px;
+            color: #e0e0e0;
+            background-color: #0071f0;
+            outline: none;
+            border-bottom: none;
+            border: #0071f0;
+        }
+        .from_input {
+            padding: 0 0 10px 0;
+            border: none;
+            border-bottom: 1px solid #727272;
+            outline: none;
+            background-color: transparent;
+            border-radius: 10px;
+            transition: 0.3s;
+            text-align: justify;
+        }</style>
 </head>
-<body>
+<body style="background-size: cover" background="https://gamerwall.pro/uploads/posts/2022-03/1647877342_1-gamerwall-pro-p-svetlo-goluboi-fon-krasivie-1.jpg">
 <div style = "text-align:center; margin-top:200px; font-size: 30px;">
     <form
             action="#"
@@ -18,12 +37,12 @@
             method="post"
             style="text-align:center; margin-top:200px; font-size: 30px;">
 
-        <input type="hidden" name = "id" th:field="*{id}">
-        <input type="text"  name="companyName" th:field="*{companyName}" placeholder="Company Name">
+        <input class="from_input" type="hidden" name = "id" th:field="*{id}">
+        <input class="from_input" type="text"  name="companyName" th:field="*{companyName}" placeholder="Company Name">
         <br><br>
-        <input type="text"  name="locatedCountry" th:field="*{locatedCountry}" placeholder="Located Country">
+        <input class="from_input" type="text"  name="locatedCountry" th:field="*{locatedCountry}" placeholder="Located Country">
         <br><br>
-        <input type="submit" value="Add">
+        <input class="from_button" type="submit" value="Add">
     </form>
 </div>
 

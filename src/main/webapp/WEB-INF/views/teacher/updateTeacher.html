@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+    .from_button{
+    border-radius: 10px;
+    color: #e0e0e0;
+    background-color: #0071f0;
+    outline: none;
+    border-bottom: none;
+    border: #0071f0;
+
+    }
+    .from_input {
+    padding: 0 0 10px 0;
+    border: none;
+    border-bottom: 1px solid #727272;
+    outline: none;
+    background-color: transparent;
+    border-radius: 10px;
+    transition: 0.3s;
+    text-align: justify;
+    }</style>
+</head>
+<body style="background-size: cover" background="https://gamerwall.pro/uploads/posts/2022-03/1647877342_1-gamerwall-pro-p-svetlo-goluboi-fon-krasivie-1.jpg">
+<form
+        action="#"
+        th:action="@{saveUpdateTeacher}"
+        th:object="${teacher}"
+        method="post"
+        style="text-align:center; margin-top:100px; font-size: 30px;">
+
+    <input type="hidden" name = "id" th:field="*{id}">
+    <input class="from_input" type="text"  name="firstName" th:field="*{firstName}" placeholder="first Name">
+    <br><br>
+    <input class="from_input" type="text"  name="lastName" th:field="*{lastName}" placeholder="last Name">
+    <br><br>
+    <input class="from_input" type="text"  name="email" th:field="*{email}" placeholder="Email">
+    <br><br>
+    <input class="from_input" type="text"  name="courseId" th:field="*{courseId}" placeholder="courseId"/>
+    <br><br>
+    <input class="from_button" type="submit" value="Update">
+</form>
+</body>
+</html>
