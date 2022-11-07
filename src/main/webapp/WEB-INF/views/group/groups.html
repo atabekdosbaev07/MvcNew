@@ -29,7 +29,7 @@ tfoot {
 
 </head>
 <body  background="https://gamerwall.pro/uploads/posts/2022-03/1647874378_2-gamerwall-pro-p-oblaka-fon-krasivie-2.jpg" >
-<button><a href="/">Main</a></button>
+
 <table class="table table-bordered ">
     <thead class="table-dark">
     <tr>
@@ -48,18 +48,25 @@ tfoot {
         <td th:text="${group.dateOfStart}"></td>
         <td th:text="${group.dateOfFinish}"></td>
         <td><a th:href="@{groups/updateGroup(groupId=${group.id})}">
-            <button style="height: 40px; color: white;border-width: 0px; width: 80px; background-color:#2bccd3; font-size: large; border-radius: 5px">update</button>
+            <button style="height: 40px; color: white;border-width: 0px; width: 80px;
+             background-color:#2bccd3; font-size: large; border-radius: 5px">update</button>
         </a>
         </td>
         <td><form th:method="DELETE" th:action="@{/groups/deleteGroup/(groupId=${group.id})}"
                onclick="return confirm('Are you sure you want to delete this company?');">
-            <button style="height: 40px;color: white;border-width: 0px; width: 80px; background-color:#4d2121; font-size: large; border-radius: 5px">delete</button>
+            <button style="height: 40px;color: white;border-width: 0px; width: 80px;
+             background-color:#4d2121; font-size: large; border-radius: 5px">delete</button>
         </form></td>
     </tr>
     </tbody>
 </table>
 <br><br><br><br>
-<input style=" display: block; margin:auto; font-size:30px; border-radius: 5px" type="button" value="Add group"
+<input style=" display: block; margin:auto; font-size:30px; border-radius: 5px;color: #ffffff; background-color: #000000"
+       type="button" value="Add group"
        onclick="window.location.href = 'groups/addGroup'">
+<br>
+<input style=" display: block;  margin:auto; font-size:30px; border-radius: 5px; color: #ffffff; background-color: #4d2121"
+       type="button" value="Main"
+       onclick="window.location.href = '/'">
 </body>
 </html>

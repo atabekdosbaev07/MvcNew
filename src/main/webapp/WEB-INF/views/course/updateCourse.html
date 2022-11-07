@@ -38,9 +38,12 @@
     <br><br>
     <input class="from_input" type="text"  name="locatedCountry" th:field="*{durationMonth}" placeholder="Located Country">
     <br><br>
-    <input class="from_input" type="text"  name="locatedCountry" th:field="*{companyId}" placeholder="Located Country">
+    <input class="from_input" type="number"  name="locatedCountry" th:field="*{companyId}" placeholder="Located Country">
     <br><br>
     <input class="from_button" type="submit" value="Update">
+    <br>
+    <input class="from_button"  type="button" value="Back"
+           onclick="window.location.href = '/courses'">
 </form>
 </body>
 </html>

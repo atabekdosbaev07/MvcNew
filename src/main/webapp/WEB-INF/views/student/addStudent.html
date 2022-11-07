@@ -45,7 +45,7 @@
             <br><br>
         <input class="from_input" type="email" name="email" th:field="*{email}" placeholder="Email">
             <br><br>
-        <input class="from_input" type="text" name="groupId" th:field="*{groupsId}" placeholder="GroupId">
+        <input class="from_input" type="number" name="groupId" th:field="*{groupsId}" placeholder="GroupId">
         </label>
         <br><br>
         <label> Online
@@ -56,6 +56,9 @@
         </label>
 
         <input class="from_button" type="submit" value="Add">
+        <br><br>
+        <input class="from_button" type="button" value="Back"
+               onclick="window.location.href = '/students'">
     </form>
 </div>
 

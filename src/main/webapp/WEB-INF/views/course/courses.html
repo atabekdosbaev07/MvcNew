@@ -28,15 +28,13 @@
     </style>
 </head>
 <body  background="https://gamerwall.pro/uploads/posts/2022-03/1647874378_2-gamerwall-pro-p-oblaka-fon-krasivie-2.jpg">
-<button><a href="/">Main</a></button>
-<h2 align="center" style="color: #4d2121"><<-Please create a company first->></h2>
+
+
 <table class="table table-bordered " style="margin-top: 100px">
     <thead class="table-dark">
-
     <tr>
         <th scope="col">Id</th>
         <th scope="col">Course Name</th>
-        <th scope="col">Company Name</th>
         <th scope="col">Duration Month</th>
         <th scope="col">Groups</th>
         <th scope="col">Update</th>
@@ -47,7 +45,6 @@
     <tr th:each="course : ${courses}">
         <td th:text="${course.id}"></td>
         <td th:text="${course.courseName}"></td>
-        <td th:text="${course.getCompany().getCompanyName()}"></td>
         <td th:text="${course.durationMonth}"></td>
         <td><a th:href="@{/groups(courseId=${course.id})}">
             <button style="height: 40px;color: white; width: 90px; border-width: 0px; background-color:#ff7700; font-size: large; border-radius: 5px">groups</button>
@@ -66,7 +63,10 @@
     </tbody>
 </table>
 <br><br><br><br>
-<input style=" display: block; margin:auto; font-size:30px; border-radius: 5px" type="button" value="Add course"
+<input style=" display: block; margin:auto; font-size:30px; border-radius: 5px;color: #ffffff; background-color: #000000" type="button" value="Add course"
        onclick="window.location.href = 'courses/addCourse'">
+<br>
+<input style=" display: block;  margin:auto; font-size:30px; border-radius: 5px; color: #ffffff; background-color: #4d2121" type="button" value="Main"
+       onclick="window.location.href = '/'">
 </body>
 </html>

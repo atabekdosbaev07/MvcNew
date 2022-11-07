@@ -21,18 +21,21 @@ public class Course {
         private String courseName;
 
         @Column(name = "duration_month")
-        private String durationMonth;
+        private Integer durationMonth;
 
-        @ManyToOne(cascade = {CascadeType.ALL})
+        @ManyToOne(cascade = {CascadeType.REMOVE,CascadeType.REFRESH})
         @JoinColumn(name = "companies_id")
         private Company company;
+
         @Transient
         private Long companyId;
+
 
         @ManyToMany(fetch = FetchType.LAZY, cascade = {CascadeType.REMOVE, CascadeType.REFRESH})
         @JoinTable(name = "groups_courses", joinColumns = @JoinColumn(name = "courses_id")
                 , inverseJoinColumns = @JoinColumn(name = "groups_id"))
         private List<Group> groups;
+
 
         @OneToOne(fetch = FetchType.LAZY, cascade = {CascadeType.REMOVE, CascadeType.REFRESH})
         @JoinTable(name = "teachers_courses", joinColumns = @JoinColumn(name = "courses_id")

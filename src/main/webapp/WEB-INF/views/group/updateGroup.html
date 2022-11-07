@@ -40,9 +40,13 @@
     <br><br>
     <input class="from_input" type="text"  name="locatedCountry" th:field="*{dateOfFinish}" placeholder="Located Country">
     <br><br>
-    <input class="from_input" type="text"  name="companyId" th:field="*{courseId}" placeholder="companyId"/>
+    <input class="from_input" type="number"  name="companyId" th:field="*{courseId}" placeholder="companyId"/>
     <br><br>
     <input class="from_button" type="submit" value="Update">
+    <br>
+    <input class="from_button"  type="button" value="Back"
+           onclick="window.location.href = '/groups'">
+
 </form>
 </body>
 </html>

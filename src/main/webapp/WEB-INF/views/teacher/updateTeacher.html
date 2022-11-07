@@ -40,9 +40,12 @@
     <br><br>
     <input class="from_input" type="text"  name="email" th:field="*{email}" placeholder="Email">
     <br><br>
-    <input class="from_input" type="text"  name="courseId" th:field="*{courseId}" placeholder="courseId"/>
+    <input class="from_input" type="number"  name="courseId" th:field="*{courseId}" placeholder="courseId"/>
     <br><br>
     <input class="from_button" type="submit" value="Update">
+    <br>
+    <input class="from_button" type="button" value="Back"
+           onclick="window.location.href = '/teachers'">
 </form>
 </body>
 </html>

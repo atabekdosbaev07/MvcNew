@@ -41,13 +41,15 @@
         <input type="hidden" name = "id" th:field="*{id}">
         <input class="from_input" type="text"  name="groupName" th:field="*{groupName}" placeholder="Group Name">
         <br><br>
-        <input class="from_input" type="text"  name="dateOfStart" th:field="*{dateOfStart}" placeholder="Date Of Start">
+        <input class="from_input" type="date"  name="dateOfStart" th:field="*{dateOfStart}" placeholder="Date Of Start">
+        <input class="from_input" type="date"  name="dateOfFinish" th:field="*{dateOfFinish}" placeholder="Date Of Finish">
         <br><br>
-        <input class="from_input" type="text"  name="dateOfFinish" th:field="*{dateOfFinish}" placeholder="Date Of Finish">
-        <br><br>
-        <input class="from_input" type="text"  name="companyId" th:field="*{courseId}" placeholder="companyId"/>
+        <input class="from_input" type="number"  name="courseId" th:field="*{courseId}" placeholder="courseId"/>
         <br><br>
         <input class="from_button" type="submit" value="Add">
+        <br><br>
+        <input class="from_button"  type="button" value="Back"
+               onclick="window.location.href = '/groups'">
     </form>
 </div>
 
