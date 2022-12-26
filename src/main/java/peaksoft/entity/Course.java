@@ -32,14 +32,14 @@ public class Course {
 
 
         @ManyToMany(fetch = FetchType.LAZY, cascade = {CascadeType.REMOVE, CascadeType.REFRESH})
-        @JoinTable(name = "groups_courses", joinColumns = @JoinColumn(name = "courses_id")
-                , inverseJoinColumns = @JoinColumn(name = "groups_id"))
+        @JoinTable(name = "groups_courses",
+                joinColumns = @JoinColumn(name = "courses_id"),
+                inverseJoinColumns = @JoinColumn(name = "groups_id")
+        )
         private List<Group> groups;
 
 
-        @OneToOne(fetch = FetchType.LAZY, cascade = {CascadeType.REMOVE, CascadeType.REFRESH})
-        @JoinTable(name = "teachers_courses", joinColumns = @JoinColumn(name = "courses_id")
-                , inverseJoinColumns = @JoinColumn(name = "teachers_id"))
+        @OneToOne(fetch = FetchType.LAZY, cascade = {CascadeType.REMOVE, CascadeType.REFRESH},mappedBy = "course")
         private Teacher teacher;
 
 }

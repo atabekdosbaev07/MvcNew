@@ -29,8 +29,9 @@ public class Teacher {
     private String email;
 
     @OneToOne(fetch = FetchType.LAZY, cascade = {CascadeType.REMOVE, CascadeType.REFRESH})
-    @JoinTable(name = "teachers_courses", joinColumns = @JoinColumn(name = "teachers_id")
-            , inverseJoinColumns = @JoinColumn(name = "courses_id"))
+    @JoinColumn(name = "courses_id")
+    /*@JoinTable(name = "teachers_courses", joinColumns = @JoinColumn(name = "teachers_id")
+            , inverseJoinColumns = @JoinColumn(name = "courses_id"))*/
     private Course course;
 
     @Transient
