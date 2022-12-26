@@ -24,8 +24,7 @@ public class Company {
     @Column(name = "located_country")
     private String locatedCountry;
 
-    @OneToMany(fetch = FetchType.EAGER,
-            cascade = {CascadeType.REMOVE,CascadeType.REFRESH},mappedBy = "company")
+    @OneToMany(cascade = {CascadeType.REMOVE,CascadeType.REFRESH},mappedBy = "company")
     private List<Course>courses;
 
 

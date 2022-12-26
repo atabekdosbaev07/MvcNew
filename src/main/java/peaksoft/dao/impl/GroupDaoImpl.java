@@ -29,7 +29,7 @@ public class GroupDaoImpl implements GroupDAO {
 
     @Override
     public List<Group> getAllGroup() {
-        List<Group>companies=entityManager.createQuery("from Group",Group.class).getResultList();
+        List<Group>companies=entityManager.createQuery("FROM Group",Group.class).getResultList();
         Comparator<Group> comparator=((o1, o2)->(int)(o1.getId()-o2.getId()));
         companies.sort(comparator);
         return companies;

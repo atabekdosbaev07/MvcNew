@@ -29,8 +29,10 @@ public class Group {
     private String dateOfFinish;
 
     @ManyToMany(fetch = FetchType.LAZY, cascade = {CascadeType.REMOVE, CascadeType.REFRESH})
-    @JoinTable(name = "groups_courses", joinColumns = @JoinColumn(name = "groups_id")
-            , inverseJoinColumns = @JoinColumn(name = "courses_id"))
+    @JoinTable(
+            name = "groups_courses",
+            joinColumns = @JoinColumn(name = "groups_id"),
+            inverseJoinColumns = @JoinColumn(name = "courses_id"))
     private List<Course> course;
 
     @Transient
